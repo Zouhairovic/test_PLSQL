@@ -1,0 +1,12 @@
+SET SERVEROUTPUT ON
+DECLARE
+     V_name VARCHAR2(30);
+BEGIN
+      SELECT ename INTO V_name
+      FROM emp WHERE empno=200;
+      DBMS_OUTPUT.PUT_LINE(v_name);
+  EXCEPTION 
+    WHEN OTHERS
+    THEN NULL;
+  END;
+  /
