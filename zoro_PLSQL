@@ -10,3 +10,13 @@ BEGIN
     THEN NULL;
   END;
   /
+  -- to add user with some information:
+  CREATE USER username
+  IDENTIFIED BY password
+  DEFAULT TABLESPACE user
+  TEMPORARY TABLESPACE temp_name
+  ACCOUNT UNLOCK;
+  
+  -- to add somes resources:
+  GRANT Resources_name TO username;
+  -- FIN 
